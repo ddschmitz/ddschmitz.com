@@ -1,0 +1,644 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>
+	Darrin Schmitz's Portfolio
+</title><link href="../Styles/NavStyles.css" rel="stylesheet" /><link href="../Styles/StyleSheet.css" rel="stylesheet" />
+    <!--SyntaxHighlighter used to format the assembly code.  http://alexgorbatchev.com/SyntaxHighlighter/download/-->
+    <script src="../SyntaxHighlighter/scripts/shCore.js"></script>
+    <script src="../SyntaxHighlighter/scripts/shBrushNasm.js"></script>
+    <link href="../SyntaxHighlighter/styles/shCoreFadeToGrey.css" rel="stylesheet" />
+    <link href="../SyntaxHighlighter/styles/shThemeFadeToGrey.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div id="MainContainer">
+        <div id='cssmenu'>
+            <ul>
+                <li><a href="../Home.html">Home</a></li>
+                <li><a href="../About.html">About</a></li>
+                <li><a href="../Education.html">Education</a></li>
+                <li><a href="../Employment.html">Employment History</a></li>
+                <li class='active'><a href='SuperAssemBros.html#'>Projects/Hobbies</a>
+                    <ul>
+                        <li><a href="My_Website.html">www.ddschmitz.com</a></li>
+                        <li><a href="SuperAssemBros.html">SuperAssemBros</a></li>
+                        <li><a href="Terminator.html">Terminator</a></li>
+                        <li><a href="Repurposing_My_Old_Computer.html">Repurposing My Old Computer</a></li>
+                    </ul>
+                </li>
+                <li><a href='../Contact.html'>Contact</a></li>
+            </ul>
+        </div>
+        
+    <div class="MainContainer">
+        <header id="SABHeader">
+            <h1>SuperAssemBros</h1>
+        </header>
+        <div id="SABP">
+            <p>SuperAssemBros was the final project for my assembly class (CSC-314).  The purpose of the project was to test our knowledge of all the assembly topics we had been taught throughout the semester.  The professor set several goals that the project had to meet which were (in his words):</p>
+            <ol class="EmplList">
+                <li>Land on blocks.  Do not run through blocks (B) walls (*) and the exit (E)</li>
+                <li>When on top of the E, your program exits.</li>
+                <li>When hitting a gold (G) you get 100 points.</li>
+                <li>Every move deducts 1 point from your score.</li>
+                <li>You need to print out the score for your program.</li>
+                <li>When jumping you move up 3 locations and Left, Right or Down will let you fall on the next move.</li>
+                <li>Create your own unique level.</li>
+                <li>Write at least 1 function.  You must use an EBP base stack and you must use parameters.</li>
+            </ol>
+            <p>We were also allowed to add our own features to the game for extra credit.  I added an extra feature that placed a question mark block on the map.  When Mario jumped up and “hit” this block, an F would appear above the block.  If Mario then moved over this F, it would add 50 points to your score and turn Mario from a lowercase m to an uppercase M.  Similar to a flower in the original Super Mario Bros. I ended up getting more than 100% on the final project and an A in the class.</p>
+            <p>Below you can see the code I wrote for SuperAssemBros.  There was a rough frame provided to us by the professor which included a few functions to get us started.  After that the majority of it was written/edited by myself. </p>
+        </div>
+        <h2 id="SABCodelbl">Assembly Code</h2>
+        <pre id="SABCode" class="brush: nasm">
+%include "asm_io.inc"
+%include "io.inc"
+; initialized data is put in the .data segment
+segment .data
+clear db 27,"[2J",27,"[1;1H",0
+cc db 27,"c",0
+scanFormat db "%c",0
+file db "input3.txt",0
+mode db "r",0
+formatA db "%c",0
+x dd 3
+y dd 3
+prevX dd 0
+prevY dd 0
+holdprevX dd 0
+holdprevY dd 0
+rows dd 15
+cols dd 51
+scorestring db "Your score is: ", 0
+score dd 20
+mario dd "m", 0
+
+; uninitialized data is put in the .bss segment
+segment .bss
+text resb 2000
+;score resb 1
+
+; code is put in the .text segment
+segment .text
+    global  asm_main
+	extern fscanf
+	extern fopen
+	extern fclose
+	extern scanf
+	extern getchar
+	extern putchar
+asm_main:
+    enter   0,0               ; setup routine
+    pusha
+	;***************CODE STARTS HERE*******
+		mov eax, clear    ;two lines to clear
+		call print_string ;clear the screen
+		mov eax, cc
+		call load	;load the file into text
+		call update ;update the file with the location
+		mov eax, scorestring
+		call print_string
+		mov eax, [score]
+		call print_int
+		call print_nl
+		mov eax, text
+		call print_string
+
+		mov ecx, 200
+	  top:
+		mov eax, 1 ;update score
+		sub [score], eax
+
+		call movement
+		call update
+
+		mov eax, clear    ;two lines to clear
+		call print_string ;clear the screen
+
+		mov eax, scorestring ;print score and text string
+		call print_string
+		mov eax, [score]
+		call print_int
+		call print_nl
+		mov eax, text
+		call print_string
+
+		mov ebx, [x] ;check to see if we need to exit
+		mov ecx, [y]
+		inc ecx
+		imul ecx, [cols]
+		add ecx, ebx
+		mov eax, [text+ecx]
+		cmp al, 'E'
+		jz exit
+
+		loop top
+	   exit:
+	;***************CODE ENDS HERE*********
+    popa
+    mov     eax, 0            ; return back to C
+    leave
+    ret
+
+
+;*********************************
+;* Function to load var text with*
+;* input from input.txt          *
+;*********************************
+load:
+	push eax
+	push esi
+
+	sub esp, 20h
+	;get the file pointer
+	mov dword [esp+4], mode; the mode for the file which is "r"
+	mov dword [esp], file; the name of the file.  Hard coded here (input.txt)
+	call fopen ; call fopen to open the file
+
+	;read stuff
+	mov [esp], eax; mov the file pointer to param 1
+	mov eax, esp  ;use stack to store a pointer where char goes
+	add eax, 1Ch  ;address is 1C up from the bottom of the stack
+	mov [esp+8], eax;pointer is param 3
+	mov dword [esp+4], scanFormat; fromat is param 2
+
+	mov edx, 0
+	mov [prevX], edx
+  	mov [prevY], edx
+
+  scan:
+	call fscanf; call scanf
+	cmp eax, 0 ; eax will be less than 1 when EOF
+	jl done; eof means quit
+	mov eax, [esp+1Ch]; mov the result (on the stack) to eax
+
+	cmp al, 'm'
+	jz Mario
+
+	mov edx, [prevX]; increment prevX
+	inc edx
+	mov [prevX], edx
+
+	cmp al, 10
+	jz NewLine
+
+	jmp save
+  NewLine:
+	mov dword [prevX], 0
+	mov edx, [prevY]
+	inc edx
+	mov [prevY], edx
+	jmp save
+  Mario:
+	mov edx, [prevX]
+	mov [x], edx
+	mov edx, [prevY]
+	mov [y], edx
+	jmp save
+  save:
+	mov [text + esi], al; store in the array
+	inc esi; add one to esi (index in the array)
+	cmp esi, 2000; dont go tooo far into the array
+	jz done; quit if went too far
+	jmp scan ;loop back
+  done:
+	call fclose; close the file pointer
+	mov byte [text+esi],0 ;set the last char to null
+	add esp, 20h; unallocate stack space
+
+	pop esi	;restore registers
+	pop eax
+	ret
+
+
+;*********************************
+;* Function to update the screen *
+;*                               *
+;*********************************
+update:
+	push eax
+	push ebx
+
+	;update the new loc
+	mov eax, [x]
+	mov ebx, [y]
+	imul ebx, [cols]
+	add eax, ebx
+	mov ebx, [mario]
+	cmp bl, 'm'
+	jz littlem
+	jmp bigm
+littlem:
+	mov byte [text + eax], 'm'
+	jmp done2
+bigm:
+	mov byte [text+eax], 'M'
+done2:
+	;update the old loc
+	mov eax, [prevX]
+	mov ebx, [prevY]
+	mov edx, 0
+	imul ebx, [cols]
+	add eax, ebx
+	mov byte [text + eax], ' '
+
+	pop ebx
+	pop eax
+	ret
+
+
+;*********************************
+;* Function to get mouse movement*
+;*                               *
+;*********************************
+movement:
+	pushad
+	mov ebx, [prevX]     ;need to store prevX and prevY for when we call checkMove
+	mov [holdprevX], ebx ;and we are not able to move
+	mov ebx, [prevY]
+	mov [holdprevY], ebx
+    	mov ebx, [x]
+	mov [prevX], ebx;save old value of x in prevX
+    	mov ebx, [y]
+	mov [prevY], ebx; save old value of y in prevY
+	call canonical_off
+	call echo_off
+	mov eax, formatA
+	push eax
+	;http://stackoverflow.com/questions/15306463/getchar-returns-
+    ;the-same-value-27-for-up-and-down-arrow-keys
+	call getchar
+	call getchar
+	call getchar
+	call canonical_on
+	call echo_on
+
+	push eax ;push the arrowkey to use in checkMove
+	cmp eax, 43h; right
+	jz right
+	cmp eax, 44h; left
+	jz left
+	cmp eax, 42h; down
+	jz down
+	cmp eax, 41h; up
+	jz up
+	;jmp mDone
+  right:
+	call checkMove
+	cmp edi, 0
+	jz undo
+	call fall ;
+        mov eax, [x]
+        inc eax
+	mov [x], eax
+	jmp mDone
+  left:
+	call checkMove
+	cmp edi, 0
+	jz undo
+	call fall
+   	mov eax, [x]
+	dec eax
+	mov [x], eax
+        jmp mDone
+  down:
+	call checkMove
+	cmp edi, 0
+	jz undo
+	call fall
+  	jmp mDone
+  up:
+	mov ebx, [x]
+	mov ecx, [y]
+	inc ecx
+	imul ecx, [cols]
+	add ebx, ecx
+	mov ebx, [text+ebx]
+	cmp bl, ' '
+	jz undo
+	call checkMove
+	cmp edi, 0
+	jz undo
+	jmp mDone
+  undo: ;if we cant mov then we need to reset prevX and prevY
+	mov eax, [holdprevX]
+	mov [prevX], eax
+	mov eax, [holdprevY]
+	mov [prevY], eax
+  mDone:
+
+	add esp, 4
+	pop eax
+	popad
+	ret
+
+
+;*********************************
+;* Function to check if there is *
+;* a block in the way            *
+;*********************************
+checkMove:
+	push ebp
+	mov ebp, esp
+	push eax
+	push ebx
+	push ecx
+	push edx
+
+	mov ebx, [x] ;mov x and y into registers here so we don't have to do it each time
+	mov ecx, [y] ;in the different if statements
+
+	mov eax, [ebp+8] ;parameter holding which input was givin in the movement function
+	cmp eax, 43h; right
+	jz checkright
+	cmp eax, 44h; left
+	jz checkleft
+	cmp eax, 42h; down
+	jz checkdown
+	cmp eax, 41h; up
+	jz checkup
+	;jmp checkDone
+  checkright:
+	imul ecx, [cols]
+	add ebx, ecx
+	add ebx, 1
+	mov eax, [text+ebx]
+	;mov ecx, [x]
+	;mov edx, [y]
+	;mov esi, [cols]
+	;dump_regs 1
+	push ebx
+	push eax
+	call gold
+	cmp al, 'B'
+	jz noright
+	cmp al, '*'
+	jz noright
+	cmp al, 'E'
+	jz noright
+	cmp al, '?'
+	jz noright
+	jmp yesright
+    noright:
+	mov edi, 0
+	jmp checkDone
+    yesright:
+        mov edi, 1
+	jmp checkDone
+  checkleft:
+	imul ecx, [cols]
+	add ebx, ecx
+	sub ebx, 1
+	mov eax, [text+ebx]
+        ;mov ecx, [x]
+        ;mov edx, [y]
+        ;mov esi, [cols]
+        ;dump_regs 1
+	push ebx
+	push eax
+	call gold
+	cmp al, 'B'
+	jz noleft
+	cmp al, '*'
+	jz noleft
+	cmp al, 'E'
+	jz noleft
+	cmp al, '?'
+	jz noleft
+	jmp yesleft
+    noleft:
+	mov edi, 0
+	jmp checkDone
+    yesleft:
+        mov edi, 1
+	jmp checkDone
+  checkdown:
+	inc ecx
+	imul ecx, [cols]
+	add ebx, ecx
+	mov eax, [text+ebx]
+	cmp al, 'B'
+	jz nodown
+	cmp al, '*'
+	jz nodown
+	cmp al, 'E'
+	jz nodown
+	cmp al, '?'
+	jz nodown
+	jmp yesdown
+    nodown:
+	mov edi, 0
+	jmp checkDone
+    yesdown:
+        mov edi, 1
+	jmp checkDone
+  checkup:
+	mov edx, [y] ;need two registers with y for when we need to update y because
+	dec edx      ;it gets overwritten in ecx when we multiply (used in statements below
+	dec ecx
+	imul ecx, [cols] ; <----- gets overwritten so we need it in edx as well
+	add ebx, ecx
+	mov eax, [text+ebx]
+	push ebx
+	push eax ;use the character & location we are checking as a parameter for gold function
+	call gold ;check to see if the space is a G using the parameters
+	cmp al, 'B'
+	jz firstblocked
+	cmp al, '*'
+	jz firstblocked
+	cmp al, '?'
+	jz firstblocked
+	mov ecx, [y]
+	mov edx, [y]
+	mov ebx, [x]
+	sub ecx, 2
+	sub edx, 2
+	imul ecx, [cols]
+	add ebx, ecx
+	mov eax, [text+ebx]
+	push ebx
+	push eax
+	call gold
+	call flower
+	cmp al, 'B'
+	jz blocked
+	cmp al, '*'
+	jz blocked
+	cmp al, '?'
+	jz blocked
+	mov ecx, [y]
+	mov edx, [y]
+	mov ebx, [x]
+	sub ecx, 3
+	sub edx, 3
+	imul ecx, [cols]
+	add ebx, ecx
+	mov eax, [text+ebx]
+	push ebx
+	push eax
+	call gold
+	cmp al, 'B'
+	jz blocked
+	cmp al, '*'
+	jz blocked
+	cmp al, '?'
+	jz blocked
+	jmp notblocked
+    firstblocked:
+	inc edx
+	mov [y], edx
+	mov edi, 0
+	jmp checkDone
+    blocked:
+	inc edx
+	mov [y], edx
+	mov edi, 1
+	jmp checkDone
+    notblocked:
+	mov [y], edx
+	mov edi, 1
+	jmp checkDone
+	jmp checkDone
+  checkDone:
+
+	pop edx
+	pop ecx
+	pop ebx
+	pop eax
+	mov esp, ebp
+	pop ebp
+	ret
+
+;*********************************
+;* Function to calculate where   *
+;* you will fall to              *
+;*********************************
+fall:
+	push ebp
+	mov ebp, esp
+	push eax
+	push ebx
+	push ecx
+
+	mov eax, [x]
+	mov ebx, [ebp+8]
+	cmp ebx, 43h; right
+	jz fallRight
+	cmp ebx, 44h; left
+	jz fallLeft
+	cmp ebx, 42h; down
+	jz fallDone
+  fallRight:
+	add eax, 1
+	jmp fallDone
+  fallLeft:
+	sub eax, 1
+  fallDone:
+	mov ebx, [y]
+	imul ebx, [cols]
+	add ebx, eax
+	mov ecx, [y]
+    while:
+	cmp bl, '*'
+	jz endwhile
+	cmp bl, 'B'
+	jz endwhile
+	cmp bl, 'E'
+	jz endwhile
+	cmp bl, '?'
+	jz endwhile
+	inc ecx
+	mov ebx, ecx
+	imul ebx, [cols]
+	add ebx, eax
+	push ebx
+	mov ebx, [text+ebx]
+	push ebx
+	call gold
+	jmp while
+    endwhile:
+	dec ecx
+	mov [y], ecx
+
+
+	pop ecx
+	pop ebx
+	pop eax
+	mov esp, ebp
+	pop ebp
+	ret
+
+
+;*********************************
+;* Function to add 100 points    *
+;* when you hit a G.  Also makes *
+;* Mario a capital M if it finds *
+;* a F.                          *
+;*********************************
+gold:
+	push ebp
+	mov ebp, esp
+	push eax
+	push ebx
+
+	mov eax, [ebp+8]
+	mov ebx, [ebp+12]
+
+	cmp al, 'G'
+	jz add100
+	cmp al, 'F'
+	jz yesflower
+	jmp nogold
+add100:
+	mov eax, 100
+	add [score], eax
+	mov byte [text+ebx], ' '
+	jmp nogold
+yesflower:
+	mov eax, 50
+	add [score], eax
+	mov byte [mario], 'M'
+nogold:
+	pop ebx
+	pop eax
+	mov esp, ebp
+	pop ebp
+	ret
+
+
+;*********************************
+;* Function to add a flower to   *
+;* the map                       *
+;*********************************
+flower:
+        push ebp
+        mov ebp, esp
+	push eax
+
+        mov eax, [ebp+8]
+        cmp al, '?'
+	jz yes?
+	jmp no?
+yes?:
+	mov eax, [ebp+12]
+	sub eax, 51 ;sub 51 because thats how many characters in a row and we need one row up
+	mov byte [text+eax], 'F'
+no?:
+
+	pop eax
+	mov esp, ebp
+	pop ebp
+	ret
+
+        </pre>
+        <script type="text/javascript">SyntaxHighlighter.all()
+        </script>
+    </div>
+
+    </div>
+</body>
+</html>
+

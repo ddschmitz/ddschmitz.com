@@ -1,0 +1,613 @@
+﻿body {background: url(../Images/Background_Small.png)}
+
+/*******************************Styles for Default.aspx*******************************/
+.MainContainer {
+    margin: auto;
+    width: 1200px;
+}
+.MainContainer p {
+    margin-left: 20px;
+    margin-right: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white;
+    font-size: 18px;
+    text-indent: 50px;
+    line-height: 25px;
+}
+#DefH1 {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #701112;
+    border: 2px solid white;
+    border-radius: 15px;
+    top: 135px;
+    width: 600px;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 70px;
+    color: #C5BD99;
+}
+#MainPic {
+    display: block;
+    margin: 0px auto 50px auto;
+    border-radius: 10px;
+    border: 10px solid rgba(0, 0, 0, 0.3);
+    width: 1000px;
+}
+#DefP{
+    margin-left: auto;
+    margin-right: auto;
+    width: 1000px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 10px solid rgba(255, 255, 255, .2);
+    border-radius: 20px;
+}
+/*******************************Styles for About.aspx*******************************/
+#AboutHeader h1 {
+    background-color: #701112;
+    border: 2px solid white;
+    border-radius: 15px;
+    width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 60px;
+    color: #C5BD99;
+}
+#Columns {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+#Columns .Column {
+    position: relative;
+    margin-top: 2%;
+    width: 44%;
+    padding: 1%;
+}
+#Columns .Left {
+    clear: both;
+    float: left;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 10px solid rgba(255, 255, 255, .2);
+    border-radius: 20px;
+}
+#Columns .Right {
+    float: right;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 10px solid rgba(255, 255, 255, .2);
+    border-radius: 20px;
+}
+#AboutContainer {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+#AboutSubLabel1 {
+    border: 1px solid white;
+    float: left;
+    width: 19%;
+    height: 35px;
+    margin-left: 14%;
+    background-color: #701112;
+    border-radius: 20px;
+    text-align: center;
+    display: table;
+}
+#AboutSubLabel2 {
+    border: 1px solid white;
+    float: right;
+    width: 18%;
+    height: 35px;
+    margin-right: 14%;
+    background-color: #701112;
+    border-radius: 20px;
+    text-align: center;
+    display: table;
+}
+#AboutContainer h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+    color: #C5BD99;
+    display: table-cell;
+}
+#Columns p{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white;
+    font-size: 18px;
+    text-align: left;
+    text-indent: 50px;
+    line-height: 25px;
+}
+/*******************************Styles for Education.aspx*******************************/
+a {text-decoration: none;}
+#DSULogo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#EducationLabel {
+    background-color: #701112;
+    border: 2px solid white;
+    border-radius: 15px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 350px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 60px;
+    color: #C5BD99;
+}
+.EducationContent {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 15px solid rgba(255, 255, 255, .2);
+    border-radius: 30px;
+}
+.EC1 h2 {
+    display: inline;
+    margin-left: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 32px;
+    color: white;
+}
+.EC1 h3 {
+    display: inline;
+    float: right;
+    margin-bottom: 0px;
+    margin-right: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: right;
+    color: white;
+}
+.ECMS{
+    position: relative;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-left: 10px;
+    top: -25px;
+    color: white;
+}
+#ECBS {
+    position: relative;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-left: 10px;
+    top: -51px;
+    color: white;
+}
+#ECP1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    width: 85%;
+    margin-top: -50px;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    font-size: 18px;
+    text-indent: 50px;
+    line-height: 25px;
+}
+#ECP2, #ECP3, #ECP4, #ECP5, #ECP6, #ECP7, #EmplP1, #EmplP2 {/*For Some reason classes mess up the margin auto so I used id's*/
+    display: block;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    width: 85%;
+    margin-top: -24px;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    font-size: 18px;
+    text-indent: 50px;
+    line-height: 25px;
+}
+#DownloadLink{
+    width: 36%;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 28px;
+    color: white;
+}
+.EC1 sup{vertical-align: top; font-size: 16px;}
+.ECHidden {visibility: hidden;}
+.sup {vertical-align: super; font-size: 12px;}
+#ScholLabel {
+    background-color: #701112;
+    border: 2px solid white;
+    border-radius: 15px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 60px;
+    color: #C5BD99;
+}
+/*******************************Styles for Employment.aspx******************************
+    I copied the HTML from Education.aspx because I was going to use the same format. 
+    So I also used the same classes for styling.
+    Hopefully this isn't too confusing.
+                                                        -Past Darrin <3
+*/
+#CIP{
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white;
+    font-size: 28px;
+}
+#EmplHeader h1 {
+    background-color: #701112;
+    border: 2px solid white;
+    border-radius: 15px;
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 60px;
+    color: #C5BD99;
+}
+.EmplP1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    width: 85%;
+    margin-top: -50px;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    font-size: 18px;
+    text-indent: 50px;
+    line-height: 25px;
+}
+.EmplList {
+    margin-left: 100px;
+    margin-bottom: 40px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white;
+    font-size: 18px;
+}
+.EmplList li {margin-bottom: 8px;}
+/*******************************Styles for P1MyWebsite.aspx********************************
+    The paragraph uses the same styling as .MainContainer p
+    The ordered list uses the same styling as .EmplList
+*/
+#ddschmitzHeader h1 {
+    background-color: #701112;
+    border: 2px solid white;
+    border-radius: 15px;
+    width: 665px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 60px;
+    color: #C5BD99;
+}
+#Proj1P {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1000px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 10px solid rgba(255, 255, 255, .2);
+    border-radius: 20px;
+}
+.Proj1Links:visited, .Proj1Links:active, .Proj1Links:link {
+    color: #C5BD99;
+}
+/*******************************Styles for P2SuperAssemBros.aspx********************************
+    The paragraph uses the same styling as .MainContainer p
+    The ordered list uses the same styling as .EmplList
+*/
+#SABHeader h1 {
+    background-color: #701112;
+    border: 2px solid white;
+    border-radius: 15px;
+    width: 570px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 60px;
+    color: #C5BD99;
+}
+#SABP{
+    margin-left: auto;
+    margin-right: auto;
+    width: 1000px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 10px solid rgba(255, 255, 255, .2);
+    border-radius: 20px;
+}
+#SABCodelbl {
+    background-color: #701112;
+    border: 1px solid white;
+    border-radius: 15px;
+    width: 265px;
+    margin: 40px auto -10px auto;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+    color: #C5BD99;
+}
+/*******************************Styles for P3OldComp.aspx*******************************/
+#Proj3Header h1 {
+    background-color: #701112;
+    border: 2px solid white;
+    border-radius: 15px;
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 60px;
+    color: #C5BD99;
+}
+#Proj3P{
+    margin-left: auto;
+    margin-right: auto;
+    width: 1000px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 10px solid rgba(255, 255, 255, .2);
+    border-radius: 20px;
+}/*The paragraph uses the same styling as .MainContainer p */
+.Proj3Images {
+    display: block;
+    margin: 30px auto 30px auto;
+    width: 30%;
+    border-radius: 10px;
+    border: 10px solid rgba(0, 0, 0, 0.3);
+}
+#Proj3SmallP {
+    font-size: 12px;
+    margin: -24px 0px 40px 0px;
+    text-align: center;
+}
+/*******************************Styles for P4.0Terminator.aspx*******************************/
+#Tmn8Header h1 {
+    background-color: #701112;
+    border: 2px solid white;
+    border-radius: 15px;
+    width: 390px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 60px;
+    color: #C5BD99;
+}
+#Tmn8List {
+    width: 150px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 10px solid rgba(255, 255, 255, .2);
+    border-radius: 20px;
+    margin-bottom: 40px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white;
+    font-size: 24px;
+}
+#Tmn8List li {
+    margin: 5px 0px 5px -25px;
+    list-style-type: none;
+}
+#Tmn8List li a {
+    color: #C5BD99;
+}
+#Tmn8List li a:hover {
+    color: white;
+}
+.container {
+    display: block;
+    margin: -150px auto 0px auto;
+    width: 700px;
+}
+#Tmn8MainPic {
+    width: 100%;
+    height: auto;
+    border: 10px solid rgba(255, 255, 255, .2);
+    border-radius: 20px;
+}
+#Tmn8MainP {
+    margin: 40px auto 20px auto;
+    width: 1000px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 10px solid rgba(255, 255, 255, .2);
+    border-radius: 20px;
+}
+.Tmn8SubHead {
+    margin: 20px auto 0px auto;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 36px;
+    color: #C5BD99;
+}
+#ReferencesContainer {
+    margin: 20px auto 20px auto;
+    text-align: center;
+}
+.Tmn8References {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white;
+    font-size: 18px;
+    line-height: 25px;
+    margin-top: 10px;
+}
+/*******************************Styles for P4.1Modifications.aspx*******************************/
+#ModsHeader h1 {
+    background-color: #701112;
+    border: 2px solid white;
+    border-radius: 15px;
+    width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 60px;
+    color: #C5BD99;
+}
+.ModsP {
+    margin: 20px 80px 20px auto; /*Have to use 80px because if you use auto its not lined up with the rest of the content for some reason*/
+    width: 1000px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 10px solid rgba(255, 255, 255, .2);
+    border-radius: 20px;
+}
+.ModsPicsContainer {
+    display: block;
+    margin: -0px auto 0px auto;
+    width: 1000px;
+}
+.ModsPics {
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 10px solid rgba(255, 255, 255, .2);
+    border-radius: 20px;
+}
+
+/*******************************Styles for P4.2Dyno_Runs.aspx*******************************/
+#DynoHeader h1 {
+    background-color: #701112;
+    border: 2px solid white;
+    border-radius: 15px;
+    width: 370px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 60px;
+    color: #C5BD99;
+}
+.DynoDates {
+    margin: 0px auto 0px auto;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 60px;
+    color: #C5BD99;
+}
+.DynoP {
+    margin: 20px auto 20px auto;
+    width: 800px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 10px solid rgba(255, 255, 255, .2);
+    border-radius: 20px;
+}
+.DynoP h1 {
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 32px;
+    color: #C5BD99;
+}
+.DynoVideos {
+    display: block;
+    margin: 20px auto 20px auto;
+    height: 450px;
+    width: 800px;
+    border: 10px solid rgba(255, 255, 255, .2);
+    border-radius: 20px;
+}
+.DynoRunsContainer {
+    display: block;
+    margin: -0px 210px 0px auto;
+    width: 800px;
+}
+.DynoRunPics {
+    width: 100%;
+    height: auto;
+    border: 10px solid rgba(255, 255, 255, .2);
+    border-radius: 20px;
+}
+/*******************************Styles for P4.3Photo_Gallery.aspx*******************************/
+#GalleryHeader h1{
+    background-color: #701112;
+    border: 2px solid white;
+    border-radius: 15px;
+    width: 440px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 60px;
+    color: #C5BD99;
+}
+/*******************************Styles for P4.4Repairs.aspx*******************************/
+/*Alot of the elements ont his page copy from Modifications.*/
+#RepairHeader h1 {
+    background-color: #701112;
+    border: 2px solid white;
+    border-radius: 15px;
+    width: 260px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 60px;
+    color: #C5BD99;
+}
+/*******************************Styles for Contact.aspx*******************************/
+.ContactHeader h1 {
+    background-color: #701112;
+    border: 2px solid white;
+    border-radius: 15px;
+    width: 370px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 60px;
+    color: #C5BD99;
+}
+#ContactP {
+    text-align: center;
+}
+#LinkedIN { /*Also makes the clickable area the same as the image.*/
+    display: table;
+    margin: auto;
+}
+/*******************************Styles for Login.aspx*******************************/
+#LoginHeader h1 {
+    background-color: #701112;
+    border: 2px solid white;
+    border-radius: 15px;
+    width: 660px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 60px;
+    color: #C5BD99;
+}
+.LoginCreds {
+    background-color: #701112;
+    border-radius: 15px;
+    width: 140px;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    color: #C5BD99;
+}
+.btnLogin {
+    background-color: #701112;
+    border-radius: 15px;
+    width: 140px;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    color: #C5BD99;
+    cursor: pointer;
+}
+/*******************************Styles for Admin.aspx*******************************/
+#AdminHeader h1 {
+    background-color: #701112;
+    border: 2px solid white;
+    border-radius: 15px;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 60px;
+    color: #C5BD99;
+}
+/*******************************Styles for Files.aspx*******************************/
