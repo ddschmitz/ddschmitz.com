@@ -1,6 +1,15 @@
 ﻿body {background: url(../Images/Background_Small.png)}
 
-/*******************************Styles for Default.aspx*******************************/
+.Simple_P{
+    margin-left: auto;
+    margin-right: auto;
+    width: 1000px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 10px solid rgba(255, 255, 255, .2);
+    border-radius: 20px;
+}
+
+/*******************************Styles for Default.html*******************************/
 .MainContainer {
     margin: auto;
     width: 1200px;
@@ -34,15 +43,7 @@
     border: 10px solid rgba(0, 0, 0, 0.3);
     width: 1000px;
 }
-#DefP{
-    margin-left: auto;
-    margin-right: auto;
-    width: 1000px;
-    background-color: rgba(0, 0, 0, 0.4);
-    border: 10px solid rgba(255, 255, 255, .2);
-    border-radius: 20px;
-}
-/*******************************Styles for About.aspx*******************************/
+/*******************************Styles for About.html*******************************/
 #AboutHeader h1 {
     background-color: #701112;
     border: 2px solid white;
@@ -122,7 +123,7 @@
     text-indent: 50px;
     line-height: 25px;
 }
-/*******************************Styles for Education.aspx*******************************/
+/*******************************Styles for Education.html*******************************/
 a {text-decoration: none;}
 #DSULogo {
     display: block;
@@ -225,8 +226,35 @@ a {text-decoration: none;}
     font-size: 60px;
     color: #C5BD99;
 }
-/*******************************Styles for Employment.aspx******************************
-    I copied the HTML from Education.aspx because I was going to use the same format. 
+/*******************************Styles for Teaching.html*******************************/
+#TeachingHeader h1 {
+    background-color: #701112;
+    border: 2px solid white;
+    border-radius: 15px;
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 60px;
+    color: #C5BD99;
+}
+#FirstClass {
+    display: block;
+    margin: 0px auto 50px auto;
+    border-radius: 10px;
+    border: 10px solid rgba(0, 0, 0, 0.3);
+    width: 700px;
+}
+#CatalogDescription {
+    margin: 0px auto 50px auto;
+    width: 700px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 10px solid rgba(255, 255, 255, .2);
+    border-radius: 20px;
+}
+/*******************************Styles for Employment.html******************************
+    I copied the HTML from Education.html because I was going to use the same format. 
     So I also used the same classes for styling.
     Hopefully this isn't too confusing.
                                                         -Past Darrin <3
@@ -268,7 +296,7 @@ a {text-decoration: none;}
     font-size: 18px;
 }
 .EmplList li {margin-bottom: 8px;}
-/*******************************Styles for P1MyWebsite.aspx********************************
+/*******************************Styles for P1MyWebsite.html********************************
     The paragraph uses the same styling as .MainContainer p
     The ordered list uses the same styling as .EmplList
 */
@@ -284,18 +312,10 @@ a {text-decoration: none;}
     font-size: 60px;
     color: #C5BD99;
 }
-#Proj1P {
-    margin-left: auto;
-    margin-right: auto;
-    width: 1000px;
-    background-color: rgba(0, 0, 0, 0.4);
-    border: 10px solid rgba(255, 255, 255, .2);
-    border-radius: 20px;
-}
 .Proj1Links:visited, .Proj1Links:active, .Proj1Links:link {
     color: #C5BD99;
 }
-/*******************************Styles for P2SuperAssemBros.aspx********************************
+/*******************************Styles for P2SuperAssemBros.html********************************
     The paragraph uses the same styling as .MainContainer p
     The ordered list uses the same styling as .EmplList
 */
@@ -311,14 +331,6 @@ a {text-decoration: none;}
     font-size: 60px;
     color: #C5BD99;
 }
-#SABP{
-    margin-left: auto;
-    margin-right: auto;
-    width: 1000px;
-    background-color: rgba(0, 0, 0, 0.4);
-    border: 10px solid rgba(255, 255, 255, .2);
-    border-radius: 20px;
-}
 #SABCodelbl {
     background-color: #701112;
     border: 1px solid white;
@@ -330,7 +342,7 @@ a {text-decoration: none;}
     font-size: 30px;
     color: #C5BD99;
 }
-/*******************************Styles for P3OldComp.aspx*******************************/
+/*******************************Styles for P3OldComp.html*******************************/
 #Proj3Header h1 {
     background-color: #701112;
     border: 2px solid white;
@@ -343,14 +355,6 @@ a {text-decoration: none;}
     font-size: 60px;
     color: #C5BD99;
 }
-#Proj3P{
-    margin-left: auto;
-    margin-right: auto;
-    width: 1000px;
-    background-color: rgba(0, 0, 0, 0.4);
-    border: 10px solid rgba(255, 255, 255, .2);
-    border-radius: 20px;
-}/*The paragraph uses the same styling as .MainContainer p */
 .Proj3Images {
     display: block;
     margin: 30px auto 30px auto;
@@ -363,7 +367,7 @@ a {text-decoration: none;}
     margin: -24px 0px 40px 0px;
     text-align: center;
 }
-/*******************************Styles for P4.0Terminator.aspx*******************************/
+/*******************************Styles for P4.0Terminator.html*******************************/
 #Tmn8Header h1 {
     background-color: #701112;
     border: 2px solid white;
@@ -432,7 +436,7 @@ a {text-decoration: none;}
     line-height: 25px;
     margin-top: 10px;
 }
-/*******************************Styles for P4.1Modifications.aspx*******************************/
+/*******************************Styles for P4.1Modifications.html*******************************/
 #ModsHeader h1 {
     background-color: #701112;
     border: 2px solid white;
@@ -466,7 +470,7 @@ a {text-decoration: none;}
     border-radius: 20px;
 }
 
-/*******************************Styles for P4.2Dyno_Runs.aspx*******************************/
+/*******************************Styles for P4.2Dyno_Runs.html*******************************/
 #DynoHeader h1 {
     background-color: #701112;
     border: 2px solid white;
@@ -518,7 +522,7 @@ a {text-decoration: none;}
     border: 10px solid rgba(255, 255, 255, .2);
     border-radius: 20px;
 }
-/*******************************Styles for P4.3Photo_Gallery.aspx*******************************/
+/*******************************Styles for P4.3Photo_Gallery.html*******************************/
 #GalleryHeader h1{
     background-color: #701112;
     border: 2px solid white;
@@ -531,7 +535,7 @@ a {text-decoration: none;}
     font-size: 60px;
     color: #C5BD99;
 }
-/*******************************Styles for P4.4Repairs.aspx*******************************/
+/*******************************Styles for P4.4Repairs.html*******************************/
 /*Alot of the elements ont his page copy from Modifications.*/
 #RepairHeader h1 {
     background-color: #701112;
@@ -545,7 +549,7 @@ a {text-decoration: none;}
     font-size: 60px;
     color: #C5BD99;
 }
-/*******************************Styles for Contact.aspx*******************************/
+/*******************************Styles for Contact.html*******************************/
 .ContactHeader h1 {
     background-color: #701112;
     border: 2px solid white;
@@ -561,53 +565,38 @@ a {text-decoration: none;}
 #ContactP {
     text-align: center;
 }
-#LinkedIN { /*Also makes the clickable area the same as the image.*/
-    display: table;
-    margin: auto;
+#LinkedIN {
+    display: block;
+    background-color: white;
+    border-radius: 15px 15px;
+    width: 225px;
+    height: 58px;
+    margin: 50px 0px 0px 150px;
 }
-/*******************************Styles for Login.aspx*******************************/
-#LoginHeader h1 {
-    background-color: #701112;
-    border: 2px solid white;
-    border-radius: 15px;
-    width: 660px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 60px;
-    color: #C5BD99;
+#LinkedIN img {
+    margin: 4px 0px 0px 18px;
 }
-.LoginCreds {
-    background-color: #701112;
-    border-radius: 15px;
-    width: 140px;
-    text-align: center;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 20px;
-    color: #C5BD99;
+#SOIcon {
+    display: block;
+    background-color: white;
+    border-radius: 15px 15px;
+    width: 225px;
+    height: 58px;
+    margin: -58px 0px 0px 487px;
 }
-.btnLogin {
-    background-color: #701112;
-    border-radius: 15px;
-    width: 140px;
-    text-align: center;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 20px;
-    color: #C5BD99;
-    cursor: pointer;
+#SOIcon img {
+    width: 200px;
+    margin: 5px 0px 0px 15px;
 }
-/*******************************Styles for Admin.aspx*******************************/
-#AdminHeader h1 {
-    background-color: #701112;
-    border: 2px solid white;
-    border-radius: 15px;
-    width: 400px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 60px;
-    color: #C5BD99;
+#GHIcon {
+    display: block;
+    background-color: white;
+    border-radius: 15px 15px;
+    width: 225px;
+    height: 58px;
+    margin: -58px 0px 0px 824px;
 }
-/*******************************Styles for Files.aspx*******************************/
+#GHIcon img {
+    width: 200px;
+    margin: -7px 0px 0px 15px;
+}
