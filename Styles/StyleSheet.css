@@ -204,7 +204,7 @@ a {text-decoration: none;}
     line-height: 25px;
 }
 #DownloadLink{
-    width: 36%;
+    width: 44%;
     margin-left: auto;
     margin-right: auto;
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -523,7 +523,7 @@ a {text-decoration: none;}
     border-radius: 20px;
 }
 /*******************************Styles for P4.3Photo_Gallery.html*******************************/
-#GalleryHeader h1{
+#GalleryHeader h1 {
     background-color: #701112;
     border: 2px solid white;
     border-radius: 15px;
@@ -534,6 +534,10 @@ a {text-decoration: none;}
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 60px;
     color: #C5BD99;
+}
+.GalleryImage {
+    margin: 5px 5px 5px 5px;
+    border-radius: 5px;
 }
 /*******************************Styles for P4.4Repairs.html*******************************/
 /*Alot of the elements ont his page copy from Modifications.*/
