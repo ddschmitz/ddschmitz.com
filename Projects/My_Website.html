@@ -6,58 +6,70 @@
 </title>
     <link href="/Styles/NavStyles.css" rel="stylesheet" />
     <link href="/Styles/StyleSheet.css" rel="stylesheet" />
+    <link href="/Bootstrap/css/bootstrap.css" rel="stylesheet" />
 </head>
 
 <body>
-    <div id="MainContainer">
-        <div id='cssmenu'>
-            <ul>
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/About.html">About</a></li>
-                <li><a href="/Education.html">Education</a></li>
-                <li><a href="/Teaching.html">Adjunct Instructor</a></li>
-                <li><a href="/Employment.html">Employment History</a></li>
-                <li class='active'><a href='My_Website.html#'>Projects/Hobbies</a>
-                    <ul>
-                        <li><a href="/Projects/My_Website.html">www.ddschmitz.com</a></li>
-                        <li><a href="/Projects/SuperAssemBros.html">SuperAssemBros</a></li>
-                        <li><a href="/Projects/Terminator.html">Terminator</a></li>
-                    </ul>
-                </li>
-                <li><a href='/Contact.html'>Contact</a></li>
-            </ul>
-        </div>
-        
-    <div class="MainContainer">
-        <header id="ddschmitzHeader">
-            <h1>www.ddschmitz.com</h1>
+    <div class="container-fluid">
+        <header>
+            <div id='cssmenu'>
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/About.html">About</a></li>
+                    <li><a href="/Education.html">Education</a></li>
+                    <li><a href="/Teaching.html">Adjunct Instructor</a></li>
+                    <li><a href="/Employment.html">Employment History</a></li>
+                    <li class='active'>
+                        <a href='My_Website.html#'>Projects/Hobbies</a>
+                        <ul>
+                            <li><a href="/Projects/My_Website.html">www.ddschmitz.com</a></li>
+                            <li><a href="/Projects/SuperAssemBros.html">SuperAssemBros</a></li>
+                            <li><a href="/Projects/Terminator.html">Terminator</a></li>
+                        </ul>
+                    </li>
+                    <li><a href='/Contact.html'>Contact</a></li>
+                </ul>
+            </div>
+
+            <h1 class="DS-red-box" style="width: 670px;">www.ddschmitz.com</h1>
         </header>
-        <div class="Simple_P">
-            <p>I began working on this website in April of 2015.  As part of my Web Application Programming II class (CIS - 375), we had to create a final project.  This final project was to create a new website using a number of different topics we were taught throughout the semester. These topics included master pages, server controls, and session state to name a few. </p>
 
-            <p>I had been playing with the thought of making my own online portfolio for a while and I saw this as the perfect opportunity to make that happen.  There were three major goals I had in mind when developing my website.</p>
+        <div class="DS-paragraph-box-div">
+            <div class="DS-paragraph-box">
+                <p>
+                I began working on this website in April of 2015.  As part of my Web Application Programming II class (CIS - 375), we had to create a final project.  This final project was to create a new website using a number of different topics we were taught throughout the semester. These topics included master pages, server controls, and session state to name a few. 
+                </p>
+                <p>
+                I had been playing with the thought of making my own online portfolio for a while and I saw this as the perfect opportunity to make that happen.  There were three major goals I had in mind when developing my website.
+                </p>
 
-            <ol class="EmplList">
-                <li>Showcase my strengths and accomplishments to future employers</li>
-                <li>Easy to use.  Such as navigating the site and viewing the content. </li>
-                <li>Be somewhat visually pleasing.  I had made other websites in the past for class assignments and would always struggle with this aspect. </li>
-            </ol>
+                <ol class="DS-list">
+                    <li>Showcase my strengths and accomplishments to future employers</li>
+                    <li>Easy to use.  Such as navigating the site and viewing the content. </li>
+                    <li>Be somewhat visually pleasing.  I had made other websites in the past for class assignments and would always struggle with this aspect. </li>
+                </ol>
+                <br />
+                <p>
+                In the end I was extremely satisfied with the way my website turned out.  I feel it is a great way to showcase my strengths and accomplishments.  It has also been a great way for me to get involved with open source projects and finding different ones to incorporate into my website.  The ones that I'm currently using include:
+                </p>
 
-            <p>In the end I was extremely satisfied with the way my website turned out.  I feel it is a great way to showcase my strengths and accomplishments.  It has also been a great way for me to get involved with open source projects and finding different ones to incorporate into my website.  The ones that I'm currently using include:</p>
+                <ul class="DS-list">
+                    <li><a href="https://github.com/lokesh/lightbox2" style="text-decoration:none; color:#C5BD99;">Lightbox</a></li>
+                    <li><a href="https://github.com/syntaxhighlighter/syntaxhighlighter" style="text-decoration:none; color:#C5BD99;">SyntaxHighlighter</a></li>
+                    <li><a href="https://github.com/blueimp/Gallery" style="text-decoration:none; color:#C5BD99;">Gallery</a></li>
+                    <li><a href="https://github.com/twbs/bootstrap" style="text-decoration:none; color:#C5BD99;">Bootstrap</a></li>
+                </ul>
 
-            <ul class="EmplList">
-                <li><a href="https://github.com/lokesh/lightbox2" style="text-decoration:none; color:#C5BD99;">Lightbox</a></li>
-                <li><a href="https://github.com/syntaxhighlighter/syntaxhighlighter" style="text-decoration:none; color:#C5BD99;">SyntaxHighlighter</a></li>
-                <li><a href="https://github.com/blueimp/Gallery" style="text-decoration:none; color:#C5BD99;">Gallery</a></li>
-            </ul>
+                <h2 style="color:#C5BD99; text-align:center;">- - UPDATE - -</h2>
 
-            <h2 style="color:#C5BD99; text-align:center;">- - UPDATE - -</h2>
-
-            <p>Around May of 2016 I made some significant changes to my website.  During CIS – 375, we did all of our assignments and developed our project websites with ASP.NET. I had also always wanted to host my website myself and I learned pretty quickly that this may not be as easy as I had hoped since my website was written with ASP.NET. I started looking into different options such as the Mono Project as a way of hosting my website on a Linux box.  They all seemed much more complicated solutions than what I was looking for since my website was such a small and simple one.  I eventually came up with the perfect solution for what I wanted to accomplish.</p>
-            <p>The solution I came up with involved cloning my current website using the GNU software package Wget.  When Wget finishes cloning your website, you are left with a folder containing an exact copy of your website, only instead of having .aspx files you have .html.  After cleaning up some minor bugs in the website, I had a perfectly functional version of my website that I could easily host myself.  I used <a href ="https://namecheap.com/" style="text-decoration:none; color:#C5BD99;">Namecheap</a> to register my domain and point it to my Linux server which I set up using <a href="https://vultr.com/" style="text-decoration:none; color:#C5BD99;">Vultr</a>.  For only $5/month I am able to host my own website using a virtual server that I have full control over! </p>
+                <p>
+                Around May of 2016 I made some significant changes to my website.  During CIS – 375, we did all of our assignments and developed our project websites with ASP.NET. I had also always wanted to host my website myself and I learned pretty quickly that this may not be as easy as I had hoped since my website was written with ASP.NET. I started looking into different options such as the Mono Project as a way of hosting my website on a Linux box.  They all seemed much more complicated solutions than what I was looking for since my website was such a small and simple one.  I eventually came up with the perfect solution for what I wanted to accomplish.
+                </p>
+                <p>
+                The solution I came up with involved cloning my current website using the GNU software package Wget.  When Wget finishes cloning your website, you are left with a folder containing an exact copy of your website, only instead of having .aspx files you have .html.  After cleaning up some minor bugs in the website, I had a perfectly functional version of my website that I could easily host myself.  I used <a href="https://namecheap.com/" style="text-decoration:none; color:#C5BD99;">Namecheap</a> to register my domain and point it to my Linux server which I set up using <a href="https://vultr.com/" style="text-decoration:none; color:#C5BD99;">Vultr</a>.  For only $5/month I am able to host my own website using a virtual server that I have full control over! 
+                </p>
+            </div>
         </div>
-    </div>
-
     </div>
 </body>
 </html>

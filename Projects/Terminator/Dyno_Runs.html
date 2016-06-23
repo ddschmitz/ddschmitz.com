@@ -1,56 +1,63 @@
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head><title>
-	Darrin Schmitz's Portfolio
-</title>
+<head>
+    <title>
+        Darrin Schmitz's Portfolio
+    </title>
     <link href="/Styles/NavStyles.css" rel="stylesheet" />
     <link href="/Styles/StyleSheet.css" rel="stylesheet" />
     <script src="/Lightbox/js/jquery-1.11.0.min.js"></script>
     <script src="/Lightbox/js/lightbox.min.js"></script>
     <link href="/Lightbox/css/lightbox.css" rel="stylesheet" />
+    <link href="/Bootstrap/css/bootstrap.css" rel="stylesheet" />
 </head>
 
 <body>
-    <div id="MainContainer">
-        <div id='cssmenu'>
-            <ul>
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/About.html">About</a></li>
-                <li><a href="/Education.html">Education</a></li>
-                <li><a href="/Teaching.html">Adjunct Instructor</a></li>
-                <li><a href="/Employment.html">Employment History</a></li>
-                <li class='active'><a href='Dyno_Runs.html#'>Projects/Hobbies</a>
-                    <ul>
-                        <li><a href="/Projects/My_Website.html">www.ddschmitz.com</a></li>
-                        <li><a href="/Projects/SuperAssemBros.html">SuperAssemBros</a></li>
-                        <li><a href="/Projects/Terminator.html">Terminator</a></li>
-                    </ul>
-                </li>
-                <li><a href='/Contact.html'>Contact</a></li>
-            </ul>
-        </div>
-        
-    <div class="MainContainer">
-        <header id="DynoHeader">
-            <h1>Dyno Runs</h1>
-        </header>
-        <hr />
-        <h1 class="DynoDates">9-30-2015</h1>
-        <div class="DynoP">
-            <h1>Mod List</h1>
-            <p>Drivetrain:</p>
-            <ul class="EmplList">
-                <li>Ford Racing 4.10 Gears</li>
-            </ul>
-        </div>
-        <iframe class="DynoVideos" src="https://www.youtube.com/embed/X7WVLphrabY" allowfullscreen></iframe>
-        <div class="DynoRunsContainer">
-            <a href="/Images/Terminator_Pics/DynoRun1.png" data-lightbox="Dyno_Sheet_1">
-                <img class="DynoRunPics" src="/Images/Terminator_Pics/DynoRun1.png" alt="First Dyno Run"/></a>
-        </div>
-    </div>
+    <div class="container-fluid">
+        <header>
+            <div id='cssmenu'>
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/About.html">About</a></li>
+                    <li><a href="/Education.html">Education</a></li>
+                    <li><a href="/Teaching.html">Adjunct Instructor</a></li>
+                    <li><a href="/Employment.html">Employment History</a></li>
+                    <li class='active'>
+                        <a href='Dyno_Runs.html#'>Projects/Hobbies</a>
+                        <ul>
+                            <li><a href="/Projects/My_Website.html">www.ddschmitz.com</a></li>
+                            <li><a href="/Projects/SuperAssemBros.html">SuperAssemBros</a></li>
+                            <li><a href="/Projects/Terminator.html">Terminator</a></li>
+                        </ul>
+                    </li>
+                    <li><a href='/Contact.html'>Contact</a></li>
+                </ul>
+            </div>
 
+            <h1 class="DS-red-box" style="width: 360px;">Dyno Runs</h1>
+        </header>
+
+        <div class="DS-paragraph-box-div">
+            <h2 class="DS-dyno-dates text-center">9-30-2015</h2>
+            <br />
+
+            <div class="DS-paragraph-box" style="width: 800px; margin: 0px auto 0px auto;">
+                <h3 class="text-center" style="color: #C5BD99; font-size: 28px;">Mod List</h3>
+                <br />
+                <p>Drivetrain:</p>
+
+                <ul class="DS-list">
+                    <li>Ford Racing 4.10 Gears</li>
+                </ul>
+            </div>
+
+            <iframe class="DS-dyno-videos" src="https://www.youtube.com/embed/X7WVLphrabY" allowfullscreen></iframe>
+
+            <a href="/Images/Terminator_Pics/DynoRun1.png" data-lightbox="Dyno_Sheet_1" style="display: block;">
+                <img class="DS-dyno-results" src="/Images/Terminator_Pics/DynoRun1.png" alt="First Dyno Run" />
+            </a>
+        </div>
     </div>
 </body>
 </html>

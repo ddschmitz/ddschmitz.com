@@ -1,73 +1,88 @@
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head><title>
-	Darrin Schmitz's Portfolio
-</title>
+<head>
+    <title>
+        Darrin Schmitz's Portfolio
+    </title>
     <link href="/Styles/NavStyles.css" rel="stylesheet" />
     <link href="/Styles/StyleSheet.css" rel="stylesheet" />
     <script src="/Lightbox/js/jquery-1.11.0.min.js"></script>
     <script src="/Lightbox/js/lightbox.min.js"></script>
     <link href="/Lightbox/css/lightbox.css" rel="stylesheet" />
+    <link href="/Bootstrap/css/bootstrap.css" rel="stylesheet" />
 </head>
 
 <body>
-    <div id="MainContainer">
-        <div id='cssmenu'>
-            <ul>
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/About.html">About</a></li>
-                <li><a href="/Education.html">Education</a></li>
-                <li><a href="/Teaching.html">Adjunct Instructor</a></li>
-                <li><a href="/Employment.html">Employment History</a></li>
-                <li class='active'><a href='Repairs.html#'>Projects/Hobbies</a>
-                    <ul>
-                        <li><a href="/Projects/My_Website.html">www.ddschmitz.com</a></li>
-                        <li><a href="/Projects/SuperAssemBros.html">SuperAssemBros</a></li>
-                        <li><a href="/Projects/Terminator.html">Terminator</a></li>
-                    </ul>
-                </li>
-                <li><a href='/Contact.html'>Contact</a></li>
-            </ul>
-        </div>
-        
-    <div class="MainContainer">
-        <header id="RepairHeader">
-            <h1>Repairs</h1>
-        </header>
-        <hr />
-        <h2 class="DynoDates">Rear Differential Gears</h2>
-        <div class="ModsP">
-            <p>The first thing we ever had to repair on my car was actually something we discovered immediately after I purchased it.  On the drive home from the dealership my brother noticed that there was a very faint rattle or grinding feeling when driving down the road.  There wasn't an audible sound associated with it but you could definitely feel it when driving.  Luckily my brother is a great mechanic and assumed there was something wrong with the rear differential.  So as much as it saddened me, I had to keep my new car in the shed until the new parts came and we could get around to fixing it.  But they did eventually come and below are some pictures of the process!</p>
-        </div>
-        <div class="ModsPicsContainer">
-            <a href="/Images/Terminator_Pics/Mods/4.10s/Parts.jpg" data-lightbox="Repair_Pic_1" data-title="The replacement bearing set and the 4.10s we also added while the differential was open.">
-                <img class="ModsPics" src="/Images/Terminator_Pics/Mods/4.10s/Parts.jpg" alt="Picture of gears and bearings." /></a>
-        </div>
-        <div class="ModsPicsContainer">
-            <a href="/Images/Terminator_Pics/Mods/4.10s/Open_Housing.jpg" data-lightbox="Mod_Pic_2" data-title="This was the first time I've ever seen the inside of a differential.">
-                <img class="ModsPics" src="/Images/Terminator_Pics/Mods/4.10s/Open_Housing.jpg" alt="Picture of the open differential."/></a>
-        </div>
-        <div class="ModsP">
-            <p>Turns out my brothers assumption was correct!  The bearing on the left is the bad one that was causing all the troubles. The one on the right is one of the new ones that we put in.</p>
-        </div>
-        <div class="ModsPicsContainer">
-            <a href="/Images/Terminator_Pics/Repairs/Rear_Dif/Bad_Bearings.jpg" data-lightbox="Repair_Pic_2" data-title="On the left is the good bearing and on the right is the bad one.">
-                <img class="ModsPics" src="/Images/Terminator_Pics/Repairs/Rear_Dif/Bad_Bearings.jpg" alt="Picture of bad bearing." /></a>
-        </div>
-        <div class="ModsPicsContainer">
-            <a href="/Images/Terminator_Pics/Repairs/Rear_Dif/Pic1.jpg" data-lightbox="Repair_Pic_3" data-title="It was quite a long process getting the differential out.">
-                <img class="ModsPics" src="/Images/Terminator_Pics/Repairs/Rear_Dif/Pic1.jpg" alt="View of the wheel well." /></a>
-        </div>
-        <div class="ModsP">
-            <p>That long shaft next to the wooden blocks is actually one half of the independent rear suspension.  There are two of them and one end comes out of the differential and the other end connects to the wheels.  Since they are separate they can move up and down independently.  On most cars they just have one long solid axle that extends from one tire to the other.  This was my first time seeing this and I thought it was very interesting!</p>
-        </div>
-        <div class="ModsPicsContainer">
-            <a href="/Images/Terminator_Pics/Repairs/Rear_Dif/Pic2.jpg" data-lightbox="Repair_Pic_4" data-title="We had to remove a lot of other parts.">
-                <img class="ModsPics" src="/Images/Terminator_Pics/Repairs/Rear_Dif/Pic2.jpg" alt="Lots of parts on the ground." /></a>
-        </div>
-    </div>
+    <div class="container-fluid">
+        <header>
+            <div id='cssmenu'>
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/About.html">About</a></li>
+                    <li><a href="/Education.html">Education</a></li>
+                    <li><a href="/Teaching.html">Adjunct Instructor</a></li>
+                    <li><a href="/Employment.html">Employment History</a></li>
+                    <li class='active'>
+                        <a href='Repairs.html#'>Projects/Hobbies</a>
+                        <ul>
+                            <li><a href="/Projects/My_Website.html">www.ddschmitz.com</a></li>
+                            <li><a href="/Projects/SuperAssemBros.html">SuperAssemBros</a></li>
+                            <li><a href="/Projects/Terminator.html">Terminator</a></li>
+                        </ul>
+                    </li>
+                    <li><a href='/Contact.html'>Contact</a></li>
+                </ul>
+            </div>
 
+            <h1 class="DS-red-box" style="width: 260px;">Repairs</h1>
+        </header>
+
+        <div class="DS-paragraph-box-div">
+            <h2 class="DS-dyno-dates text-center">Rear Differential Gears</h2>
+            <br />
+            <div class="DS-paragraph-box">
+                <p>
+                    The first thing we ever had to repair on my car was actually something we discovered immediately after I purchased it.  On the drive home from the dealership my brother noticed that there was a very faint rattle or grinding feeling when driving down the road.  There wasn't an audible sound associated with it but you could definitely feel it when driving.  Luckily my brother is a great mechanic and assumed there was something wrong with the rear differential.  So as much as it saddened me, I had to keep my new car in the shed until the new parts came and we could get around to fixing it.  But they did eventually come and below are some pictures of the process!
+                </p>
+            </div>
+            <br />
+            <a href="/Images/Terminator_Pics/Mods/4.10s/Parts.jpg" data-lightbox="Repair_Pic_1" data-title="The replacement bearing set and the 4.10s we also added while the differential was open.">
+                <img class="ModsPics" src="/Images/Terminator_Pics/Mods/4.10s/Parts.jpg" alt="Picture of gears and bearings." />
+            </a>
+            <br />
+            <a href="/Images/Terminator_Pics/Mods/4.10s/Open_Housing.jpg" data-lightbox="Mod_Pic_2" data-title="This was the first time I've ever seen the inside of a differential.">
+                <img class="ModsPics" src="/Images/Terminator_Pics/Mods/4.10s/Open_Housing.jpg" alt="Picture of the open differential." />
+            </a>
+            <br />
+            <br />
+            <div class="DS-paragraph-box">
+                <p>
+                    Turns out my brothers assumption was correct!  The bearing on the left is the bad one that was causing all the troubles. The one on the right is one of the new ones that we put in.
+                </p>
+            </div>
+            <br />
+            <a href="/Images/Terminator_Pics/Repairs/Rear_Dif/Bad_Bearings.jpg" data-lightbox="Repair_Pic_2" data-title="On the left is the good bearing and on the right is the bad one.">
+                <img class="ModsPics" src="/Images/Terminator_Pics/Repairs/Rear_Dif/Bad_Bearings.jpg" alt="Picture of bad bearing." />
+            </a>
+            <br />
+            <a href="/Images/Terminator_Pics/Repairs/Rear_Dif/Pic1.jpg" data-lightbox="Repair_Pic_3" data-title="It was quite a long process getting the differential out.">
+                <img class="ModsPics" src="/Images/Terminator_Pics/Repairs/Rear_Dif/Pic1.jpg" alt="View of the wheel well." />
+            </a>
+            <br />
+            <br />
+            <div class="DS-paragraph-box">
+                <p>
+                    That long shaft next to the wooden blocks is actually one half of the independent rear suspension.  There are two of them and one end comes out of the differential and the other end connects to the wheels.  Since they are separate they can move up and down independently.  On most cars they just have one long solid axle that extends from one tire to the other.  This was my first time seeing this and I thought it was very interesting!
+                </p>
+            </div>
+            <br />
+            <div class="ModsPicsContainer">
+                <a href="/Images/Terminator_Pics/Repairs/Rear_Dif/Pic2.jpg" data-lightbox="Repair_Pic_4" data-title="We had to remove a lot of other parts.">
+                    <img class="ModsPics" src="/Images/Terminator_Pics/Repairs/Rear_Dif/Pic2.jpg" alt="Lots of parts on the ground." />
+                </a>
+            </div>
+        </div>
     </div>
 </body>
 </html>

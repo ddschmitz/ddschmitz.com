@@ -8,35 +8,39 @@
     <link href="/Styles/NavStyles.css" rel="stylesheet" />
     <link href="/Styles/StyleSheet.css" rel="stylesheet" />
     <link rel="stylesheet" href="/Gallery/css/blueimp-gallery.min.css">
+    <link href="/Bootstrap/css/bootstrap.css" rel="stylesheet" />
 </head>
 
 <body>
-    <div id="MainContainer">
-        <div id='cssmenu'>
-            <ul>
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/About.html">About</a></li>
-                <li><a href="/Education.html">Education</a></li>
-                <li><a href="/Teaching.html">Adjunct Instructor</a></li>
-                <li><a href="/Employment.html">Employment History</a></li>
-                <li class='active'>
-                    <a href='Photo_Gallery.html#'>Projects/Hobbies</a>
-                    <ul>
-                        <li><a href="/Projects/My_Website.html">www.ddschmitz.com</a></li>
-                        <li><a href="/Projects/SuperAssemBros.html">SuperAssemBros</a></li>
-                        <li><a href="/Projects/Terminator.html">Terminator</a></li>
-                    </ul>
-                </li>
-                <li><a href='/Contact.html'>Contact</a></li>
-            </ul>
-        </div>
+    <div class="container-fluid">
+        <header>
+            <div id='cssmenu'>
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/About.html">About</a></li>
+                    <li><a href="/Education.html">Education</a></li>
+                    <li><a href="/Teaching.html">Adjunct Instructor</a></li>
+                    <li><a href="/Employment.html">Employment History</a></li>
+                    <li class='active'>
+                        <a href='Photo_Gallery.html#'>Projects/Hobbies</a>
+                        <ul>
+                            <li><a href="/Projects/My_Website.html">www.ddschmitz.com</a></li>
+                            <li><a href="/Projects/SuperAssemBros.html">SuperAssemBros</a></li>
+                            <li><a href="/Projects/Terminator.html">Terminator</a></li>
+                        </ul>
+                    </li>
+                    <li><a href='/Contact.html'>Contact</a></li>
+                </ul>
+            </div>
 
-        <div class="MainContainer">
-            <header id="GalleryHeader">
-                <h1>Photo Gallery</h1>
-            </header>
-            <div class="ModsP">
-                <p align="center">Sioux Falls (05-10-16) Taken by Kyle Wendland</p>
+            <h1 class="DS-red-box" style="width: 440px;">Photo Gallery</h1>
+        </header>
+
+        <div class="DS-paragraph-box-div">
+            <div class="DS-paragraph-box text-center" style="text-indent: 0px;">
+
+                <!--Text indent stops first image from being indented in the gallery.-->
+                <h2 style="font-size: 26px; color: #C5BD99; margin: 20px 0px 20px 0px;">Sioux Falls, SD (05-10-16) Taken by Kyle Wendland</h2>
 
                 <div id="blueimp-gallery" class="blueimp-gallery">
                     <div class="slides"></div>
@@ -48,67 +52,95 @@
                     <ol class="indicator"></ol>
                 </div>
 
-                <div id="links">
+                <div id="FirstShoot">
                     <div id="GallerySpacer" style="text-align:center">
-                        <a href="/Images/Terminator_Pics/Photo_Gallery/First_Photo_Shoot/FPS1.jpg">
+                        <a href="/Images/Terminator_Pics/Photo_Gallery/First_Photo_Shoot/FPS1.jpg" data-gallery="#blueimp-gallery-FirstShoot">
                             <img class="GalleryImage" src="/Images/Terminator_Pics/Photo_Gallery/First_Photo_Shoot/FPS1.jpg" alt="Image" width="210" height="140">
                         </a>
-                        <a href="/Images/Terminator_Pics/Photo_Gallery/First_Photo_Shoot/FPS2.jpg">
+                        <a href="/Images/Terminator_Pics/Photo_Gallery/First_Photo_Shoot/FPS2.jpg" data-gallery="#blueimp-gallery-FirstShoot">
                             <img class="GalleryImage" src="/Images/Terminator_Pics/Photo_Gallery/First_Photo_Shoot/FPS2.jpg" alt="Image" width="210" height="140">
                         </a>
-                        <a href="/Images/Terminator_Pics/Photo_Gallery/First_Photo_Shoot/FPS3.jpg">
+                        <a href="/Images/Terminator_Pics/Photo_Gallery/First_Photo_Shoot/FPS3.jpg" data-gallery="#blueimp-gallery-FirstShoot">
                             <img class="GalleryImage" src="/Images/Terminator_Pics/Photo_Gallery/First_Photo_Shoot/FPS3.jpg" alt="Image" width="210" height="140">
                         </a>
-                        <a href="/Images/Terminator_Pics/Photo_Gallery/First_Photo_Shoot/FPS4.jpg">
+                        <a href="/Images/Terminator_Pics/Photo_Gallery/First_Photo_Shoot/FPS4.jpg" data-gallery="#blueimp-gallery-FirstShoot">
                             <img class="GalleryImage" src="/Images/Terminator_Pics/Photo_Gallery/First_Photo_Shoot/FPS4.jpg" alt="Image" width="210" height="140">
                         </a>
-                        <a href="/Images/Terminator_Pics/Photo_Gallery/First_Photo_Shoot/FPS5.jpg">
+                        <a href="/Images/Terminator_Pics/Photo_Gallery/First_Photo_Shoot/FPS5.jpg" data-gallery="#blueimp-gallery-FirstShoot">
                             <img class="GalleryImage" src="/Images/Terminator_Pics/Photo_Gallery/First_Photo_Shoot/FPS5.jpg" alt="Image" width="210" height="140">
                         </a>
-                        <a href="/Images/Terminator_Pics/Photo_Gallery/First_Photo_Shoot/FPS6.jpg">
+                        <a href="/Images/Terminator_Pics/Photo_Gallery/First_Photo_Shoot/FPS6.jpg" data-gallery="#blueimp-gallery-FirstShoot">
                             <img class="GalleryImage" src="/Images/Terminator_Pics/Photo_Gallery/First_Photo_Shoot/FPS6.jpg" alt="Image" width="210" height="140">
                         </a>
-                        <a href="/Images/Terminator_Pics/Photo_Gallery/First_Photo_Shoot/FPS7.jpg">
+                        <a href="/Images/Terminator_Pics/Photo_Gallery/First_Photo_Shoot/FPS7.jpg" data-gallery="#blueimp-gallery-FirstShoot">
                             <img class="GalleryImage" src="/Images/Terminator_Pics/Photo_Gallery/First_Photo_Shoot/FPS7.jpg" alt="Image" width="210" height="140">
                         </a>
-                        <a href="/Images/Terminator_Pics/Photo_Gallery/First_Photo_Shoot/FPS8.jpg">
+                        <a href="/Images/Terminator_Pics/Photo_Gallery/First_Photo_Shoot/FPS8.jpg" data-gallery="#blueimp-gallery-FirstShoot">
                             <img class="GalleryImage" src="/Images/Terminator_Pics/Photo_Gallery/First_Photo_Shoot/FPS8.jpg" alt="Image" width="210" height="140">
                         </a>
-                        <a href="/Images/Terminator_Pics/Photo_Gallery/First_Photo_Shoot/FPS9.jpg">
+                        <a href="/Images/Terminator_Pics/Photo_Gallery/First_Photo_Shoot/FPS9.jpg" data-gallery="#blueimp-gallery-FirstShoot">
                             <img class="GalleryImage" src="/Images/Terminator_Pics/Photo_Gallery/First_Photo_Shoot/FPS9.jpg" alt="Image" width="210" height="140">
                         </a>
-                        <a href="/Images/Terminator_Pics/Photo_Gallery/First_Photo_Shoot/FPS10.jpg">
+                        <a href="/Images/Terminator_Pics/Photo_Gallery/First_Photo_Shoot/FPS10.jpg" data-gallery="#blueimp-gallery-FirstShoot">
                             <img class="GalleryImage" src="/Images/Terminator_Pics/Photo_Gallery/First_Photo_Shoot/FPS10.jpg" alt="Image" width="210" height="140">
                         </a>
-                        <a href="/Images/Terminator_Pics/Photo_Gallery/First_Photo_Shoot/FPS11.jpg">
+                        <a href="/Images/Terminator_Pics/Photo_Gallery/First_Photo_Shoot/FPS11.jpg" data-gallery="#blueimp-gallery-FirstShoot">
                             <img class="GalleryImage" src="/Images/Terminator_Pics/Photo_Gallery/First_Photo_Shoot/FPS11.jpg" alt="Image" width="210" height="140">
                         </a>
-                        <a href="/Images/Terminator_Pics/Photo_Gallery/First_Photo_Shoot/FPS13.jpg">
+                        <a href="/Images/Terminator_Pics/Photo_Gallery/First_Photo_Shoot/FPS13.jpg" data-gallery="#blueimp-gallery-FirstShoot">
                             <img class="GalleryImage" src="/Images/Terminator_Pics/Photo_Gallery/First_Photo_Shoot/FPS13.jpg" alt="Image" width="210" height="140">
                         </a>
-                        <a href="/Images/Terminator_Pics/Photo_Gallery/First_Photo_Shoot/FPS14.jpg">
+                        <a href="/Images/Terminator_Pics/Photo_Gallery/First_Photo_Shoot/FPS14.jpg" data-gallery="#blueimp-gallery-FirstShoot">
                             <img class="GalleryImage" src="/Images/Terminator_Pics/Photo_Gallery/First_Photo_Shoot/FPS14.jpg" alt="Image" width="210" height="140">
                         </a>
-                        <a href="/Images/Terminator_Pics/Photo_Gallery/First_Photo_Shoot/FPS15.jpg">
+                        <a href="/Images/Terminator_Pics/Photo_Gallery/First_Photo_Shoot/FPS15.jpg" data-gallery="#blueimp-gallery-FirstShoot">
                             <img class="GalleryImage" src="/Images/Terminator_Pics/Photo_Gallery/First_Photo_Shoot/FPS15.jpg" alt="Image" width="210" height="140">
                         </a>
-                        <a href="/Images/Terminator_Pics/Photo_Gallery/First_Photo_Shoot/FPS16.jpg">
+                        <a href="/Images/Terminator_Pics/Photo_Gallery/First_Photo_Shoot/FPS16.jpg" data-gallery="#blueimp-gallery-FirstShoot">
                             <img class="GalleryImage" src="/Images/Terminator_Pics/Photo_Gallery/First_Photo_Shoot/FPS16.jpg" alt="Image" width="210" height="140">
                         </a>
-                        <a href="/Images/Terminator_Pics/Photo_Gallery/First_Photo_Shoot/FPS17.jpg">
+                        <a href="/Images/Terminator_Pics/Photo_Gallery/First_Photo_Shoot/FPS17.jpg" data-gallery="#blueimp-gallery-FirstShoot">
                             <img class="GalleryImage" src="/Images/Terminator_Pics/Photo_Gallery/First_Photo_Shoot/FPS17.jpg" alt="Image" width="210" height="140">
                         </a>
-                        <a href="/Images/Terminator_Pics/Photo_Gallery/First_Photo_Shoot/FPS18.jpg">
+                        <a href="/Images/Terminator_Pics/Photo_Gallery/First_Photo_Shoot/FPS18.jpg" data-gallery="#blueimp-gallery-FirstShoot">
                             <img class="GalleryImage" src="/Images/Terminator_Pics/Photo_Gallery/First_Photo_Shoot/FPS18.jpg" alt="Image" width="210" height="140">
-</div>
+                        </a>
+                    </div>
+                </div>
+                <hr />
+                <h2 style="font-size: 26px; color: #C5BD99; margin: 0px 0px 20px 0px;">Champaign, IL (July 2015) My Mother / a Salesman at the dealership</h2>
+
+                <div id="Dealer">
+                    <div id="GallerySpacer" style="text-align:center">
+                        <a href="/Images/Terminator_Pics/Photo_Gallery/Dealer_Pics/Img1.jpg" data-gallery="#blueimp-gallery-Dealer">
+                            <img class="GalleryImage" src="/Images/Terminator_Pics/Photo_Gallery/Dealer_Pics/Img1.jpg" alt="Image" width="249" height="140">
+                        </a>
+                        <a href="/Images/Terminator_Pics/Photo_Gallery/Dealer_Pics/Img2.jpg" data-gallery="#blueimp-gallery-Dealer">
+                            <img class="GalleryImage" src="/Images/Terminator_Pics/Photo_Gallery/Dealer_Pics/Img2.jpg" alt="Image" width="249" height="140">
+                        </a>
+                        <a href="/Images/Terminator_Pics/Photo_Gallery/Dealer_Pics/Img3.jpg" data-gallery="#blueimp-gallery-Dealer">
+                            <img class="GalleryImage" src="/Images/Terminator_Pics/Photo_Gallery/Dealer_Pics/Img3.jpg" alt="Image" width="100" height="177">
+                        </a>
+                        <a href="/Images/Terminator_Pics/Photo_Gallery/Dealer_Pics/Img4.jpg" data-gallery="#blueimp-gallery-Dealer">
+                            <img class="GalleryImage" src="/Images/Terminator_Pics/Photo_Gallery/Dealer_Pics/Img4.jpg" alt="Image" width="100" height="177">
+                        </a>
+                        <a href="/Images/Terminator_Pics/Photo_Gallery/Dealer_Pics/Img5.jpg" data-gallery="#blueimp-gallery-Dealer">
+                            <img class="GalleryImage" src="/Images/Terminator_Pics/Photo_Gallery/Dealer_Pics/Img5.jpg" alt="Image" width="249" height="140">
+                        </a>
+                        <a href="/Images/Terminator_Pics/Photo_Gallery/Dealer_Pics/Img6.jpg" data-gallery="#blueimp-gallery-Dealer">
+                            <img class="GalleryImage" src="/Images/Terminator_Pics/Photo_Gallery/Dealer_Pics/Img6.jpg" alt="Image" width="100" height="177">
+                        </a>
+                        <a href="/Images/Terminator_Pics/Photo_Gallery/Dealer_Pics/Img7.jpg" data-gallery="#blueimp-gallery-Dealer">
+                            <img class="GalleryImage" src="/Images/Terminator_Pics/Photo_Gallery/Dealer_Pics/Img7.jpg" alt="Image" width="100" height="177">
+                        </a>
+                    </div>
                 </div>
             </div>
-
         </div>
 
         <script src="/Gallery/js/blueimp-gallery.min.js"></script>
         <script>
-            document.getElementById('links').onclick = function (event) {
+            document.getElementById('FirstShoot').onclick = function (event) {
                 event = event || window.event;
                 var target = event.target || event.srcElement,
                     link = target.src ? target.parentNode : target,
@@ -117,6 +149,17 @@
                 blueimp.Gallery(links, options);
             };
         </script>
+        <script>
+            document.getElementById('Dealer').onclick = function (event) {
+                event = event || window.event;
+                var target = event.target || event.srcElement,
+                    link = target.src ? target.parentNode : target,
+                    options = { index: link, event: event },
+                    links = this.getElementsByTagName('a');
+                blueimp.Gallery(links, options);
+            };
+        </script>
+
     </div>
 </body>
 </html>
