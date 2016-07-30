@@ -35,8 +35,10 @@ a {
     color: white;
     font-size: 18px;
 }
+
 /*Need text-indent otherwise there is a large space between the dot and the text in a li*/
 .DS-list li {margin-bottom: 3px; text-indent: 0px;} 
+
 /*******************************Styles for Default.html*******************************/
 #MainPic {
     display: block;

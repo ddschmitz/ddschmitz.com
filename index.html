@@ -5,42 +5,67 @@
     <title>
         Darrin Schmitz's Portfolio
     </title>
-    <link href="/Styles/NavStyles.css" rel="stylesheet" />
-    <link href="/Styles/StyleSheet.css" rel="stylesheet" />
     <script src="/Lightbox/js/jquery-1.11.0.min.js"></script>
     <script src="/Lightbox/js/lightbox.min.js"></script>
-    <link href="/Lightbox/css/lightbox.css" rel="stylesheet" />
+    <script src="/jQuery/jquery-2.2.4.js"></script>
+    <script src="/Bootstrap/js/bootstrap.js"></script>
     <link href="/Bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="/Styles/NavStyles.css" rel="stylesheet" />
+    <link href="/Styles/StyleSheet.css" rel="stylesheet" />
+    <link href="/Lightbox/css/lightbox.css" rel="stylesheet" />
 </head>
 
 <body>
 
     <div class="container-fluid">
         <header>
-            <div id='cssmenu'>
-                <ul>
-                    <li><a href="/index.html">Home</a></li>
-                    <li><a href="/About.html">About</a></li>
-                    <li><a href="/Education.html">Education</a></li>
-                    <li><a href="/Teaching.html">Adjunct Instructor</a></li>
-                    <li><a href="/Employment.html">Employment History</a></li>
-                    <li class='active'>
-                        <a href='index.html#'>Projects/Hobbies</a>
-                        <ul>
-                            <li><a href="/Projects/My_Website.html">www.ddschmitz.com</a></li>
-                            <li><a href="/Projects/SuperAssemBros.html">SuperAssemBros</a></li>
-                            <li><a href="/Projects/Terminator.html">Terminator</a></li>
+            <nav class="navbar navbar-default navbar-fixed-top">
+                <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li><a href="/index.html">Home</a></li>
+                            <li><a href="/Education.html">Education</a></li>
+                            <li><a href="/Teaching.html">Adjunct Instructor</a></li>
+                            <li><a href="/Employment.html">Employment History</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projects/Hobbies <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="/Projects/My_Website.html">www.ddschmitz.com</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="/Projects/SuperAssemBros.html">SuperAssemBros</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="/Projects/Terminator.html">Terminator</a></li>
+                                    <li><a href="/Projects/Terminator/Dyno_Runs.html">&nbsp;&nbsp;<span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span> Dyno Runs</a></li>
+                                    <li><a href="/Projects/Terminator/Modifications.html">&nbsp;&nbsp;<span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span> Mods</a></li>
+                                    <li><a href="/Projects/Terminator/Repairs.html">&nbsp;&nbsp;<span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span> Repairs</a></li>
+                                    <li><a href="/Projects/Terminator/Photo_Gallery.html">&nbsp;&nbsp;<span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span> Gallery</a></li>
+                                </ul>
+                            </li>
                         </ul>
-                    </li>
-                    <li><a href='/Contact.html'>Contact</a></li>
-                </ul>
-            </div>
+                    </div>
+                </div>
+            </nav>
+
+            <br />
+            <br />
 
             <h1 class="DS-red-box" style="width: 510px;">Darrin Schmitz</h1>
         </header>
 
         <div>
-            <a href="/Images/MainPic.jpg" data-lightbox="Default_Page_Pic" data-title="This picture was taken in the Sandia Mountains with Albuquerque in the background." style="margin: 0px auto 0px auto; display: block; width: 60%;"><img id ="MainPic" src="/Images/MainPic.jpg" alt="Image Of Me"/></a>
+            <a href="/Images/MainPic.jpg" data-lightbox="Default_Page_Pic" data-title="This picture was taken in the Sandia Mountains with Albuquerque in the background." style="margin: 0px auto 0px auto; display: block; width: 60%;"><img id="MainPic" src="/Images/MainPic.jpg" alt="Image Of Me" /></a>
             <br />
             <br />
             <div class="DS-paragraph-box-div">
