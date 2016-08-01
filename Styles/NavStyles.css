@@ -1,5 +1,5 @@
 /* Styles for navigation bar. */
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
     .navbar-nav {
         display: inline-block;
         float: none;
@@ -10,7 +10,7 @@
 }
 
 /* navbar */
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   /* Settings for width on desktop. */
     .navbar-default {
         width: 60%;
@@ -65,7 +65,7 @@
 }
 
 /* dropdown menu non-mobile */
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
     .navbar-default .navbar-nav .open .dropdown-menu {
         border: 2px solid white;
         border-radius: 10px;
@@ -80,7 +80,7 @@
         background: #701112;
     }
 }
-@media (max-width: 767px) {
+@media screen and (max-width: 767px) {
         .navbar-default {
         width: 80%;
     }

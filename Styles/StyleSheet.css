@@ -42,24 +42,27 @@ a {
 /*******************************Styles for Default.html*******************************/
 #MainPic {
     display: block;
-    margin: 0px auto 0px auto;
+    margin: -19px auto 0px auto;
     border-radius: 10px;
     border: 10px solid rgba(0, 0, 0, 0.3);
     width: 100%;
 }
-/*******************************Styles for About.html*******************************/
-.DS-paragraph-box-div-about{
-    margin: 0px auto 0px auto;
-    background-color: rgba(0, 0, 0, 0.4);
-    border: 10px solid rgba(255, 255, 255, .2);
-    border-radius: 20px;
-}
-.DS-paragraph-box-about{
+#DS-Email {
     padding: 10px 15px 10px 15px;
     color: white;
     font-size: 18px;
-    text-indent: 50px;
     line-height: 25px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 10px solid rgba(255, 255, 255, .2);
+    border-radius: 20px;
+    width: 400px;
+    margin: 0px auto;
+}
+.DS-Links img {
+    border: 2px solid black;
+    border-radius: 20px;
+    display: block;
+    margin: 10px auto;
 }
 /*******************************Styles for Education.html*******************************/
 .DS-edu-img {
@@ -67,22 +70,25 @@ a {
     margin: 0px auto 0px auto;
 }
 .DS-edu-block h2 {
-    margin: 0px 0px 0px -40px;
+    margin: 0px;
     font-size: 32px;
     font-weight: bold;
     color: white;
+    text-indent: 0px;
 }
 .DS-edu-block h3 {
-    margin: -35px 0px 10px 0px;
+    margin: 0px;
     font-weight: bold ;
     color: white;
+    text-indent: 0px;
 }
 .DS-edu-block h4 {
-    margin: 0px 0px 0px -40px;
+    margin: 0px;
     font-size: 14px;
     font-weight: bold;
     font-style: italic;
     color: white;
+    text-indent: 0px;
 }
 /*******************************Styles for Teaching.html*******************************/
 #FirstClass {
@@ -176,42 +182,3 @@ a {
 }
 /*******************************Styles for Repairs.html*******************************/
 /*Alot of the elements ont his page copy from Modifications.*/
-/*******************************Styles for Contact.html*******************************/
-#LinkedIN {
-    display: block;
-    background-color: white;
-    border-radius: 15px 15px;
-    border: 2px solid black;
-    width: 225px;
-    height: 62px;
-    margin: 0px auto 0px auto;
-}
-#LinkedIN img {
-    margin: 5px 0px 0px 18px;
-}
-#SOIcon {
-    display: block;
-    background-color: white;
-    border-radius: 15px 15px;
-    border: 2px solid black;
-    width: 225px;
-    height: 62px;
-    margin: 0px auto 0px auto;
-}
-#SOIcon img {
-    width: 200px;
-    margin: 7px 0px 0px 15px;
-}
-#GHIcon {
-    display: block;
-    background-color: white;
-    border-radius: 15px 15px;
-    border: 2px solid black;
-    width: 225px;
-    height: 62px;
-    margin: 0px auto 0px auto;
-}
-#GHIcon img {
-    width: 200px;
-    margin: -7px 0px 0px 15px;
-}
