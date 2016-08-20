@@ -103,6 +103,30 @@ a {
 */
 /*******************************Styles for My_Website.html*********************************/
 /*******************************Styles for SuperAssemBros.html*****************************/
+/*******************************Styles for FCC.html****************************************/
+.DS-CodePen-Info {
+    color: #C5BD99;
+    background-color: #701112;
+    border: 2px solid white;
+    border-radius: 50%;
+    display: block;
+    margin: 10px auto;
+    width: 36px;
+    height: 36px;
+}
+.DS-CodePen-Info:hover, .DS-CodePen-Info:visited {
+    color: #C5BD99;
+}
+.DS-CodePen-Info span{
+    margin: 8px 0px 0px 9px;
+}
+.DS-CodePen-Link img{
+    display: block;
+    margin: 0px auto;
+    width: 300px;
+    border: 10px solid rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+}
 /*******************************Styles for P4.0Terminator.html*****************************/
 #Tmn8List {
     width: 200px;
